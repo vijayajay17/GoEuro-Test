@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoEuro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpC-R7-xH2">
+                                <rect key="frame" x="57" y="57" width="486" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="GOu-SO-J4Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-Xq-oPN">
+                                <rect key="frame" x="57" y="321" width="486" height="30"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nTf-H7-EKT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x32-Cg-APJ">
+                                <rect key="frame" x="57" y="131" width="486" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="MZX-sH-eOQ"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hs1-2W-8ZK">
+                                <rect key="frame" x="57" y="186" width="486" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="VGK-eq-YB8"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqj-l2-p8p">
+                                <rect key="frame" x="57" y="241" width="486" height="30"/>
+                                <state key="normal" title="Select Date">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dateAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XVu-KG-roa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="RpC-R7-xH2" secondAttribute="trailing" constant="41" id="88d-gC-szD"/>
+                            <constraint firstItem="YFG-Xq-oPN" firstAttribute="top" secondItem="Gqj-l2-p8p" secondAttribute="bottom" constant="50" id="EAZ-zI-64L"/>
+                            <constraint firstItem="RpC-R7-xH2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="41" id="Ipb-ur-k1b"/>
+                            <constraint firstItem="YFG-Xq-oPN" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="41" id="S8b-NQ-rD4"/>
+                            <constraint firstItem="Gqj-l2-p8p" firstAttribute="top" secondItem="hs1-2W-8ZK" secondAttribute="bottom" constant="25" id="V4c-qz-poy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YFG-Xq-oPN" secondAttribute="trailing" constant="41" id="aQ6-JN-VeM"/>
+                            <constraint firstItem="Gqj-l2-p8p" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="41" id="gF4-f4-Ru3"/>
+                            <constraint firstItem="hs1-2W-8ZK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="41" id="gou-Mn-NgE"/>
+                            <constraint firstItem="hs1-2W-8ZK" firstAttribute="top" secondItem="x32-Cg-APJ" secondAttribute="bottom" constant="25" id="hsI-88-ax6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gqj-l2-p8p" secondAttribute="trailing" constant="41" id="igi-Km-Rt5"/>
+                            <constraint firstItem="RpC-R7-xH2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="37" id="jNa-c8-F2w"/>
+                            <constraint firstItem="x32-Cg-APJ" firstAttribute="top" secondItem="RpC-R7-xH2" secondAttribute="bottom" constant="25" id="rKa-Of-RCg"/>
+                            <constraint firstItem="x32-Cg-APJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="41" id="t9e-ur-v0h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x32-Cg-APJ" secondAttribute="trailing" constant="41" id="vT2-tr-Chs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hs1-2W-8ZK" secondAttribute="trailing" constant="41" id="xDZ-e5-fHN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateButton" destination="Gqj-l2-p8p" id="SUE-rA-nsh"/>
+                        <outlet property="m_endTextField" destination="hs1-2W-8ZK" id="0bL-n5-VNZ"/>
+                        <outlet property="m_startTextField" destination="x32-Cg-APJ" id="XQD-QV-4dz"/>
+                        <outlet property="searchButton" destination="YFG-Xq-oPN" id="pa2-CV-sjU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="322"/>
+        </scene>
+    </scenes>
+</document>
